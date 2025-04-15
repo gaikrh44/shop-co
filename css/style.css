@@ -586,7 +586,7 @@
     }
 }
 
-@media (width<=920px) {
+@media (width<=929px) {
     .header_navbar{
         display: none;
     }
@@ -790,6 +790,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin-top: 24px;
     }
 
     .new_arrivals-product{
@@ -811,7 +812,195 @@
 
     .new_arrivals-title{
         font-size: 32px;
+        margin-bottom: 32px;
+        margin-top: 40px;
+    }
+
+    .new_arrivals_container{
+        padding: 0 10px 40px 10px;
+    }
+}
+
+.drees_style{
+    padding: 0 10px;
+}
+
+
+.drees_style_container{
+    background: #F0F0F0;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    padding: 70px 64px 76px 64px;
+}
+
+.drees_style-title{
+    font-size: 48px;
+    color: var(--color-dark);
+    font-weight: 700;
+    text-align: center;
+}
+
+.casual-div{
+    background: url(../images/casual.png) var(--color-light);
+    height: 289px;
+    flex-grow: 1.35 ;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+}
+
+.div-1{
+    
+    position: relative;
+}
+
+.style-content{
+    display: flex;
+    gap: 20px;
+}
+
+.formal-div{
+    background: url(../images/formal.png) var(--color-light);
+    height: 289px;
+    flex-grow: 2.27;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+}
+
+.drees_style-content{
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.text-1{
+    position: absolute;
+    top: 25px;
+    left: 36px;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.party-div{
+    background: url(../images/party.png) var(--color-light);
+    height: 289px;
+    flex-grow: 2.27;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+}
+.gym-div{
+    background: url(../images/gym.png) var(--color-light);
+    height: 289px;
+    flex-grow: 1.35;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+@media (width<=1170px) {
+    .casual-div{
+        flex-grow: 1;
+        background-position: right;
+    }
+
+    .formal-div{
+        flex-grow: 1;
+        background-position: center;
+    }
+
+    .party-div{
+        flex-grow: 1;
+        background-position: center;
+    }
+
+    .gym-div{
+        flex-grow: 1;
     }
 }
 
 
+@media (width<=898px) {
+    .style-content{
+        flex-wrap: wrap;
+    }
+
+    .casual-div{
+        width: 100%;
+        background-position: right;
+    }
+
+    .formal-div{
+        width: 100%;
+        background-position: right;
+        background-size: cover;
+        
+    }
+
+    .party-div{
+        width: 100%;
+        background-position: right;
+        
+    }
+
+    .gym-div{
+        width: 100%;
+        background-position: right;
+        
+    }
+}
+
+@media (width<=708px) {
+    .casual-div{
+        height: 190px;
+        background: url(../images/casual-small.png) var(--color-light);
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .formal-div{
+        height: 190px;
+        background: url(../images/formal-small.png) var(--color-light);
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .party-div{
+        height: 190px;
+        background: url(../images/party-small.png) var(--color-light);
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .gym-div{
+        height: 190px;
+        background: url(../images/gym-small.png) var(--color-light);
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .text-1{
+        font-size: 24px;
+        top: 16px;
+        left: 24px;
+    }
+
+    .drees_style-title{
+        font-size: 32px;
+    }
+
+    .drees_style_container{
+        padding: 40px 24px 27px 24px;
+    }
+}
