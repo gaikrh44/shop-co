@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <title>Shop-co</title>
 </head>
 <body>
@@ -176,7 +180,97 @@
                 </div>
             </div>
         </section>
+        <section class="testimonials">
+            <div class="testimonial_container ">
+                <div class="testimonial_title-btns">
+                    <h2 class="testi-title">OUR HAPPY CUSTOMERS</h2>
+                    <div class="testi-btns">
+                        <a href="#" class="btn-link left" ><img src="icons/arrow-left-icon.svg" alt=""></a>
+                        <a href="#" class="btn-link right"><img src="icons/arrow-right-icon.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="testi-container swiper mySwiper">
+                    <div class="testi-wripper swiper-wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          centeredSlides: false,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".right",
+            prevEl: ".left",
+          },
+        });
+        // ........................................................................................
+        const media = window.matchMedia('screen and (max-width: 1050px)');
+        const mediaPhone = window.matchMedia('screen and (max-width: 600px)');
+
+        function swiperMedia() {
+        // e.matches ? swiper.params.slidesPerView = n : swiper.params.slidesPerView = 3
+        if (mediaPhone.matches) {
+            swiper.params.slidesPerView = 1
+        }else if(media.matches) {
+            swiper.params.slidesPerView = 2
+        }else  {
+            swiper.params.slidesPerView = 3
+        }
+        swiper.update();
+        }
+
+        media.addEventListener('change', swiperMedia);
+        mediaPhone.addEventListener('change', swiperMedia);
+        swiperMedia(media);
+        swiperMedia(mediaPhone);
+
+        // ........................................................................................
+        var appendNumber = 4;
+        var prependNumber = 1;
+        document
+          .querySelector(".prepend-2-slides")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide([
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            ]);
+          });
+        document
+          .querySelector(".prepend-slide")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide(
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+            );
+          });
+        document
+          .querySelector(".append-slide")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide(
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+            );
+          });
+        document
+          .querySelector(".append-2-slides")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide([
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            ]);
+          });
+      </script>
 </body>
 </html>

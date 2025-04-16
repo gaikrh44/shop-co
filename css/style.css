@@ -650,6 +650,23 @@
 @media(width<=498px) {
     .main_title{
         font-size: 36px;
+        line-height: 34px;
+    }
+
+    .stat_text{
+        font-size: 12px;
+    }
+
+    .stat_num{
+        font-size: 24px;
+    }
+
+    .main_section-text{
+        padding: 40px 20px 29px 16px;
+    }
+
+    .main_text{
+        line-height: 20px;
     }
 
     .statistics{
@@ -1002,5 +1019,111 @@
 
     .drees_style_container{
         padding: 40px 24px 27px 24px;
+    }
+}
+
+
+.testimonial_title-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.testi-title{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1;
+}
+
+.testi-wripper{
+    display: flex;
+    gap: 20px;
+    /* overflow-x: auto; */
+}
+
+.card-list{
+    padding: 28px 32px;
+    border-radius: 20px;
+    border: 1px solid #F0F0F0;
+    height: 218.6px !important;
+    overflow-y: auto;
+}
+
+.card-list::-webkit-scrollbar{
+    width: 2px;
+    color: #F0F0F0;
+}
+
+.testi-btns{
+    display: flex;
+    gap: 16px;
+}
+
+.card-name{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0 12px 0;
+}
+
+.card-text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--text-base-color);
+    overflow-y: auto;
+}
+
+.card-text-div{
+    overflow-y: auto;
+}
+
+.testimonial_container {
+  position: relative;
+  height: 100%;
+  padding: 0 10px;
+  margin: 80px 0 80px 0;
+}
+
+.swiper {
+  width: 100%;
+}
+
+
+@media (width <= 710px) {
+    .testi-title{
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    .card-list{
+        padding: 24px;
+        border-radius: 24px;
+        border: 1px solid #F0F0F0;
+        height: 186.19px !important;
+        overflow-y: auto;
+    }
+
+    .card-name{
+        font-size: 16px;
+        margin: 12px 0 8px 0;
+    }
+
+    .card-text{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .testimonial_container{
+        margin: 50px 0 24px 0;
+    }
+
+    .testimonial_title-btns{
+        margin-bottom: 24px;
     }
 }
